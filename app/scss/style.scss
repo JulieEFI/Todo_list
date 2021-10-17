@@ -1,0 +1,484 @@
+/* No CSS */
+/*# sourceMappingURL=style.css.map */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+
+$aqua:#0077C3;
+$blue: #026AA7;
+$dark-blue: #172b4d;
+$grey-btn: rgba(9, 30, 66, .08);
+$white-grey: #f4f5f7;
+$white-smoke: whitesmoke;
+$milk:#fafbfc;
+$super-red:#b63232;
+
+
+
+@mixin flexy-nav-left {
+  display: flex;
+  justify-content: flex-start;
+  flex-grow: 1;
+  flex-basis: 100%
+}
+
+@mixin flexy-nav-right {
+  display: flex;
+  justify-content: flex-end;
+  flex-grow: 1;
+  flex-basis: 100%
+}
+
+@mixin round ($width, $color) {
+  width: $width;
+  height: $width;
+  background: $color;
+  border-radius: $width/2;
+}
+
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Helvetica', sans-serif;
+
+}
+
+html {
+  box-sizing: border-box;
+}
+
+body,
+html {
+  height: 100%;
+}
+
+body {
+  width: 100%;
+  margin: 0 auto;
+  z-index: 0;
+  overflow: hidden;
+  background-image: url(../images/wall-1846965_1920.jpg);
+}
+
+body,
+button,
+html,
+input,
+select,
+textarea {
+  font-weight: 400;
+}
+
+a:hover {
+  cursor: pointer;
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+a:link,
+a:visited,
+a:hover,
+a:active {
+  text-decoration: none;
+  color: $white-smoke;
+}
+
+ul,
+li {
+  margin: 0;
+  padding: 0;
+
+}
+
+.container {
+  margin: 0 15px 0 15px;
+}
+
+/* HEADER */
+
+.header {
+  color: $white-smoke;
+  height: 40px;
+  line-height: 40px;
+  background: linear-gradient(rgba(255, 255, 255, 0.2), rgba(0, 0, 0, 0.5));
+
+}
+
+.header__wrapper {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+
+}
+
+.header__nav-left {
+  @include flexy-nav-left;
+}
+
+.header__nav-right {
+  @include flexy-nav-right;
+}
+
+.header__list .header__list-item {
+  display: inline;
+  list-style: none;
+
+}
+
+.fa-clipboard {
+  padding-right: 2px;
+}
+
+.fa-user-circle {
+  vertical-align: middle;
+  font-size: 22px;
+}
+
+.header__title-container {
+  display: flex;
+  align-items: center;
+}
+
+.header__title-container .fa-clipboard {
+  font-size: 20px;
+
+}
+
+.header__title {
+  font-size: 18px;
+  display: inline-block;
+
+}
+
+.header__list-item {
+  padding: 5px;
+
+}
+
+.header__list-item,
+.board__list-item {
+  margin: 2px;
+  background: rgba(255, 255, 255, 0.2);
+  font-size: 16px;
+}
+
+.header__list-item:hover,
+.board__list-item:hover {
+  background: rgba(255, 255, 255, 0.5);
+}
+
+
+.header__link {
+  padding: 10px 10px;
+
+}
+
+.header__search {
+  margin-left: 2px;
+  margin-top: 5px;
+}
+
+.example {
+  line-height: 25px;
+  max-height: 25px;
+  border: 1px solid $white-smoke;
+  border-radius: 3px;
+  background: transparent;
+}
+
+form.example input[type=text] {
+  padding: 5px;
+  font-size: 14px;
+  color: $white-smoke;
+  float: left;
+  width: 80%;
+  background: transparent;
+  border: none;
+}
+
+form.example button {
+  padding: 5px 0px 2px 0px;
+  float: inline-start;
+  width: 20%;
+  background: transparent;
+  font-size: 14px;
+  color: $white-smoke;
+  cursor: pointer;
+  border: none;
+  opacity: 0.4;
+
+  &:hover {
+    background: $grey-btn;
+    opacity: 1;
+    transition: 0.6s;
+    border-radius: 1px;
+  }
+}
+
+form.example::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+/* HEADER END */
+
+
+/* BOARD */
+
+.board-wrapper {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+}
+
+.board__main-content {
+  display: flex;
+  margin-top: 10px;
+
+}
+
+.fa-chevron-down {
+  padding-left: 7px;
+  font-size: 14px;
+
+}
+
+.fa-ellipsis-h {
+  font-size: 14px;
+}
+
+.fa-users,
+.fa-user-plus,
+.fa-ellipsis-h,
+.fa-bolt,
+.fa-clipboard {
+  padding-right: 10px;
+}
+
+.round {
+  @include round(30px, #123);
+}
+
+.board__header {
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-between;
+
+}
+
+.board__list-item {
+  padding: 5px 20px 5px 20px;
+
+}
+
+
+.icon-clipboard-list:before {
+  content: "\e900";
+}
+
+.board__list .board__list-item {
+  display: inline;
+  list-style: none;
+}
+
+
+.board__stages {
+  margin: 10px 8px 8px 0;
+}
+
+.board__stage-container {
+  background-color: whitesmoke;
+  border-radius: 3px;
+  box-sizing: border-box;
+  display: inline-block;
+  width: 350px;
+  flex-direction: column;
+  max-height: 100%;
+  position: relative;
+  white-space: normal;
+  padding: 10px;
+  vertical-align: top;
+  color: #3e4e6b;
+}
+
+.board__stage-container h2 {
+  color: #475369;
+  font-size: 14px;
+  padding: 0;
+  margin: 0;
+  font-weight: bold;
+  margin-bottom: 10px;
+
+}
+
+.board__stage-container>button {
+  font-size: 14px;
+  border: none;
+  padding: 5px;
+  font-weight: bold;
+  width: 100%;
+  text-align: left;
+  border-radius: 5px;
+
+}
+
+.board__stage-show {
+  color: #58595a;
+}
+
+.board__stage-show:hover {
+  background-color: $grey-btn;
+}
+
+.board__stage-form textarea {
+  outline: none;
+  border: none;
+  width: 100%;
+  font-size: 12px;
+  box-shadow: 1px 1px 2px 1px $white-grey;
+  background-color: $milk;
+  box-sizing: border-box;
+  -webkit-appearance: none;
+  border-radius: 3px;
+  display: block;
+  line-height: 20px;
+  margin-bottom: 12px;
+  padding: 8px 12px;
+  transition-property: background-color, border-color, box-shadow;
+  transition-duration: 85ms;
+  transition-timing-function: ease;
+  overflow: hidden;
+  overflow-wrap: break-word;
+  resize: vertical;
+  height: 60px;
+}
+
+.board__stage-form button {
+  background-color: $blue;
+  box-shadow: none;
+  border: none;
+  color: $white-smoke;
+  border-radius: 5px;
+  padding: 5px 10px;
+  font-size: 14px;
+}
+
+.board__stage-form button:hover {
+  background-color: $blue;
+}
+
+.board__stage-form {
+  display: none;
+
+}
+
+.board__stage-card {
+  width: 100%;
+  font-size: 12px;
+  box-shadow: 1px 1px 2px 1px $white-grey;
+  background-color: $milk;
+  box-sizing: border-box;
+  -webkit-appearance: none;
+  border-radius: 3px;
+  display: block;
+  line-height: 20px;
+  margin-bottom: 6px;
+  padding: 4px 6px;
+  overflow: hidden;
+  overflow-wrap: break-word;
+}
+
+.board__stage-card h3 {
+  width: auto;
+  display: inline-block;
+  font-size: 12px;
+  margin: 0;
+  padding: 0;
+}
+
+.board__stage-card button {
+  background-color: $blue;
+  box-shadow: none;
+  border: none;
+  color: $white-smoke;
+  border-radius: 5px;
+  padding: 5px;
+  font-size: 10px;
+  float: right;
+}
+
+.board__delete-btn {
+  margin-right: 3px;
+  opacity: 0.6;
+}
+
+.board__add-btn,
+.board__edit-btn {
+  opacity: 0.6;
+}
+
+.board__delete-btn:hover,
+.board__add-btn:hover,
+.board__edit-btn:hover {
+  opacity: 1;
+
+}
+
+.board__edit-btn {
+  margin-right: 5px;
+}
+
+
+.board__delete-all-btn {
+  max-width: 100px;
+  margin-top: 10px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: $white-smoke;
+  outline: none;
+  opacity: 0.8;
+  border: 1px solid #F64C2B;
+  border-radius: 3px;
+  box-shadow: 0 0 0 30px rgba(0, 0, 0, 0) inset, .1em .1em .2em #800;
+  background: linear-gradient(#FB9575, #F45A38 48%);
+
+}
+
+
+.board__delete-all-btn:hover {
+  opacity: 1;
+  transition: 0.4s;
+}
+
+
+.board__calendar{
+  border-color: #026AA7;
+  margin-bottom: 5px;
+  min-width: 164px;
+  min-height: 27px;
+  color:white;
+  background-color:#026AA7;
+  border-radius: 5px;
+}
+.board_select{
+  border: none;
+  margin-bottom: 10px;
+  min-width: 164px;
+  min-height: 27px;
+  color:white;
+  background-color:#026AA7;
+  border-radius: 5px;
+}
+
+
+/* BOARD END */

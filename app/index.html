@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trello</title>
+    <link rel="stylesheet" href="./css/normalize.css">
+    <link href="./fonts/css/all.css" rel="stylesheet">
+    <link rel="stylesheet" href="./css/style.min.css">
+
+</head>
+
+<body>
+    <header class="header">
+        <div class="container">
+            <section class="header__wrapper">
+                <div class="header__nav-left">
+                    <ul class="header__list">
+                        <li class="header__list-item"><a href="#" class="header__link"><i class="fas fa-bars"></i></a>
+                        </li>
+                        <li class="header__list-item"><a href="#" class="header__link"><i class="fas fa-home"></i></a>
+                        </li>
+                        <li class="header__list-item"><a href="#" class="header__link"><i class="far fa-clipboard"></i>
+                                Boards</a></li>
+                    </ul>
+                    <div class="header__search">
+                        <form class="example" action="" style="margin:auto;max-width:200px">
+                            <input type="text" placeholder="Search.." name="search2">
+                            <button type="submit"><i class="fa fa-search"></i></button>
+                        </form>
+                    </div>
+                </div>
+
+                <div class="header__title-container"><i class="far fa-clipboard"></i>
+                    <h3 class="header__title"><a>Trello</a></h3>
+                </div>
+
+                <div class="header__nav-right">
+                    <ul class="header__list">
+                        <li class="header__list-item"><a href="#" class="header__link"><i class="fas fa-plus"></i></a>
+                        </li>
+                        <li class="header__list-item"><a href="#" class="header__link"><i
+                                    class="fas fa-info-circle"></i></a></li>
+                        <li class="header__list-item"><a href="#" class="header__link"><i class="far fa-bell"></i></a>
+                        </li>
+                        <li class="header__list-item"><a href="#" class="header__link"><i class="fas fa-user-circle"></i></a></li>
+                    </ul>
+
+                </div>
+            </section>
+        </div>
+    </header>
+
+    <main>
+        <section class="board">
+            <div class="board__wrapper">
+                <div class="container">
+
+                    <div class="board__header">
+                        <div class="board__nav-lef">
+                            <ul class="board__list">
+                                <li class="board__list-item"><a href="#" class=""><i class="fab fa-flipboard"></i> Board
+                                        <i class="fas fa-chevron-down"></i></a></li>
+                                <li class="board__list-item"><a href="#" class="">Marketing Overwiew</a></li>
+                                <li class="board__list-item"><a href="#" class=""><i class="far fa-star"></i></a></li>
+                                <li class="board__list-item"><a href="#" class=""><i class="fas fa-users"></i>For
+                                        workspace</a></li>
+                                <li class="board__list-item round"><a href="#" class="">A</a></li>
+                                <li class="board__list-item"><a href="#" class=""><i class="fas fa-user-plus"></i>Invite</a></li>
+                            </ul>
+                        </div>
+
+                        <div class="board__nav-right">
+                            <ul class="board__list">
+                                <li class="board__list-item"><a href="#" class=""> <i class="fas fa-bolt"></i>
+                                        Automation</a></li>
+                                <li class="board__list-item"><a href="#" class=""><i class="fas fa-ellipsis-h"></i>
+                                        Menu</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="board__main-content">
+                        <div class="board__stages">
+                            <div class="board__stage-container">
+                                <h2>Todo</h2>
+                                <div class="board__stage-list" data-stage="todo"></div>
+                                <div class="board__stage-form">
+                                    <form >
+                                        <p><input class="board__calendar" type="date" name="calendar" value="2020-01-31"   min="2021-08-01"></p>
+                                    </form>
+                                    <select class="board_select" name="" id="board__users"></select>
+                                    <textarea  maxlength="33" placeholder="Введите заголовок карточки"></textarea>
+                                    <button class="board__stage-add" data-next="in-progress">Добавить карточку</button>
+                                    <button class="board__stage-close">x</button>
+                                </div>
+                                <button class="board__stage-show">+ Добавить карточку</button>
+                                <button class="board__delete-all-btn"> Удалить все</button>
+                            </div>
+                            <div class="board__stage-container">
+                                <h2>In progress</h2>
+                                <div class="board__stage-list" data-stage="in-progress"></div>
+                                <div class="board__stage-form">                               
+                                </div>
+                                <button class="board__delete-all-btn"> Удалить все</button>
+                            </div>
+                            <div class="board__stage-container">
+                                <h2>Done</h2>
+                                <div class="board__stage-list" data-stage="done"></div>
+                                <div class="board__stage-form">
+                                </div>
+                                
+                                <button class="board__delete-all-btn"> Удалить все</button>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script src="./js/main.min.js"></script>
+</body>
+
+</html>
